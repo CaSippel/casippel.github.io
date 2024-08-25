@@ -1,0 +1,65 @@
+/* mixins for each display type (eg. H1, H2 ..., B1, B2 ...) */
+@import 'styles/variables/font-styles';
+@import 'styles/mixins';
+
+/* common attributes among text elements */
+@mixin body-font-style {
+  font-family: $body-font-family;
+  font-style: $body-font-style;
+  letter-spacing: $body-letter-spacing;
+}
+
+@mixin B1-24($color) {
+  @include body-font-style;
+  @include font-sizing(24px, 300, 30px);
+  color: $color;
+}
+
+@mixin B2-16($color) {
+  @include body-font-style;
+  @include font-sizing(16px, 400, 30px);
+  color: $color;
+}
+
+/* type text in filter popup */
+@mixin B2-16-line-height-sm($color) {
+  @include body-font-style;
+  @include font-sizing(16px, 400, 24px);
+  color: $color;
+}
+
+@mixin B2-16-light($color) {
+  @include body-font-style;
+  @include font-sizing(16px, 300, 30px);
+  color: $color;
+}
+
+@mixin B3-12($color) {
+  @include body-font-style;
+  @include font-sizing(12px, 400, 16px);
+  color: $color;
+}
+
+@mixin H1-32($color) {
+  @include body-font-style;
+  @include font-sizing(32px, 700, 40px);
+  color: $color;
+}
+
+@mixin H2-24($color) {
+  @include body-font-style;
+  @include font-sizing(24px, 700, 30px);
+  color: $color;
+}
+
+@mixin H3-16($color) {
+  @include body-font-style;
+  @include font-sizing(16px, 700, 30px);
+  color: $color;
+}
+
+@mixin H4-12($color) {
+  @include body-font-style;
+  @include font-sizing(12px, 700, 16px);
+  color: $color;
+}

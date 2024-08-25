@@ -1,0 +1,29 @@
+@function pxToRem($size) {
+  @return ($size / 16px) * 1rem;
+}
+
+/* generic font sizing - should only be used by the typography mixins
+ * assumes $size and $line-height are given in px
+*/
+@mixin font-sizing($size, $weight, $line-height) {
+  font-size: $size;
+  font-size: pxToRem($size);
+  font-weight: $weight;
+  line-height: $line-height;
+  line-height: pxToRem($line-height);
+}
+
+/* centers the content in the middle of the screen for desktop and mobile
+*/
+@mixin center-popup($desktop) {
+  position: fixed;
+  top: 50%;
+
+  @if $desktop {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else {
+    left: 0;
+    transform: translate(0, -50%);
+  }
+}

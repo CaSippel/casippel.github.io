@@ -1,0 +1,30 @@
+@import 'styles/mixins';
+@import 'styles/variables/colors';
+
+/* constants */
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$spacer-xxsm: 0.5rem;
+$spacer-xsm: 0.75rem;
+$spacer-sm: 1rem;
+$spacer: 1.5rem;
+$spacer-md: 2rem;
+$spacer-lg: 3rem;
+$spacer-xlg: 6rem;
+$spacer-xxlg: 12.5rem;
+
+/* borders */
+$card-border-radius: $border-radius-md;
+$checkbox-border-radius: $border-radius-sm;
+$input-border-radius: $border-radius-sm;
+$input-border: pxToRem(1px) solid $gray;
+$nav-item-border: 0.25rem solid transparent;
+
+/* height and widths */
+$checkbox-height: $spacer;
+$input-height: 3.5rem;
+$input-height-mobile: 3rem;
+$popup-max-height: calc(100% - #{$spacer-lg * 2});
+$popup-max-width-mobile: calc(100% - #{$spacer * 2});
+$popup-width: calc(26.25rem - #{$spacer * 2});
+$popup-width-mobile: -webkit-fill-available;
