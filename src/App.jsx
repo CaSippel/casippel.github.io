@@ -1,16 +1,16 @@
 import logo from './logo.svg';
-import './App.css';
+import { translations } from './lib/translations';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className="app">
+      <header className="app__header">
+        <img src={logo} className="app__logo" alt="logo" />
+        <h1 className="app__title">{ translations.general.companyName }</h1>
+        <p className="app__description">{ translations.general.companyDescription }</p>
         <a
-          className="App-link"
+          className="app__link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"

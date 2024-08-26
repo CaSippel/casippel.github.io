@@ -1,6 +1,9 @@
 /* mixins for each display type (eg. H1, H2 ..., B1, B2 ...) */
-@import 'styles/variables/font-styles';
-@import 'styles/mixins';
+@import 'src/styles/mixins';
+
+$body-font-family: 'Roboto', 'sans serif';
+$body-font-style: normal;
+$body-letter-spacing: 0em;
 
 /* common attributes among text elements */
 @mixin body-font-style {
