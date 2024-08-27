@@ -45,7 +45,7 @@ function Header({activeTab, onTabChange, mobile}) {
         </button>
       )}
       {showSideNav && (
-        <SideNav onClose={closeSideNav} title={translations.general.companyName}>{
+        <SideNav onClose={closeSideNav} title={translations.general.companyNameFull}>{
           Object.entries(translations.general.owners).map(([key, tab]) =>
             <div key={`menu_item_wrapper_key_${key}`} className="sideNav__menu-item-wrapper">
               <NavButton key={`menu_item_key_${key}`}
@@ -58,7 +58,7 @@ function Header({activeTab, onTabChange, mobile}) {
 
       <button className="header__home" onClick={() => onTabChange(translations.general.owners.c)}>
         <img src={CompanyLogo} className="header__logo" alt="logo" />
-        <h1 className="header__title">{translations.general.companyName}</h1>
+        <h1 className="header__title">{translations.general.companyNameFull}</h1>
       </button>
 
       {!mobile && (
