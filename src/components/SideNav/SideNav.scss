@@ -1,0 +1,56 @@
+@import 'src/styles/typography';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/dimensions';
+
+$side-nav-border-radius: 0px $border-radius-md $border-radius-md 0px;
+$side-nav-header-padding: 1.25rem 0 1.25rem $spacer;
+$side-nav-menu-item-padding: $spacer-sm 0 $spacer-sm $spacer;
+
+.sideNav {
+  background-color: $white;
+  border-radius: $side-nav-border-radius;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 4px 0px 8px $gray-shadow;
+  width: 70%;
+
+  &__close {
+    background: none;
+    border: none;
+    padding: 0 $spacer 0 0;
+  }
+
+  &__header {
+    display: inline-flex;
+    padding: $side-nav-header-padding;
+  }
+
+  &__menu-item {
+    @include H3-16($text-black);
+    background: none;
+    border: none;
+    border-left: $nav-item-border;
+    padding: $side-nav-menu-item-padding;
+    text-align: left;
+
+    &--active {
+      color: $accent-color-primary;
+      border-left-color: $accent-color-primary;
+      box-sizing: border-box;
+    }
+  }
+
+  &__menu-item-wrapper {
+    border-bottom: solid 1px $gray-light;
+  }
+
+  &__title {
+    @include H4-12($text-black);
+    margin: 0;
+    align-self: center;
+  }
+}

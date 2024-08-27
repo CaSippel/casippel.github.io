@@ -1,0 +1,14 @@
+@import 'src/styles/typography';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/dimensions';
+@import 'src/styles/variables/breakpoints';
+
+.modal {
+  background: $modal-overlay;
+  display: block;
+  position: fixed;
+  left:0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

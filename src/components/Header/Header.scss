@@ -1,0 +1,72 @@
+@import 'src/styles/mixins';
+@import 'src/styles/typography';
+@import 'src/styles/variables/breakpoints';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/dimensions';
+
+$header-padding: $spacer-sm $spacer-xxlg 0 $spacer-xxlg;
+$header-padding-mobile: 1.25rem pxToRem(124px) 1.25rem $spacer;
+
+.header {
+  background-color: $app-bg;
+  box-shadow: 0px 4px 8px $gray-shadow;
+  display: flex;
+  justify-content: space-between;
+  padding: $header-padding;
+  width: $popup-width-mobile;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $header-padding-mobile;
+  }
+
+  &__hamburger {
+    background: none;
+    border: none;
+  }
+
+  &__home {
+    background: none;
+    border: none;
+    display: inline-flex;
+    padding: 0 0 $spacer-sm 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    padding-right: $spacer-sm;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 28px;
+    }
+  }
+
+  &__tab {
+    @include H3-16($text-white);
+    background: none;
+    border: none;
+    border-bottom: $nav-item-border;
+    padding: 0 $spacer;
+
+    &--active {
+      color: $accent-color-primary;
+      border-bottom-color: $accent-color-primary;
+      box-sizing: border-box;
+    }
+  }
+  &__tabs {
+    display: inline-flex;
+  }
+
+  &__title {
+    @include H2-24($text-white);
+    margin: 0;
+    align-self: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      @include H3-16($text-white);
+    }
+  }
+}
