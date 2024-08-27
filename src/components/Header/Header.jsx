@@ -27,12 +27,17 @@ function Header({activeTab, onTabChange, mobile}) {
       setShowSideNav(true);
     }
   };
+  const onClickTab = (tab) => {
+    onTabChange(tab);
+    closeSideNav();
+  };
+
   function NavButton({itemName, itemClass}) {
     const isActiveTab = (itemName === activeTab);
     return (<button
         aria-current={isActiveTab}
         className={`${itemClass} ${(isActiveTab ? `${itemClass}--active` : ``)}`}
-        onClick={() => onTabChange(itemName)}>
+        onClick={() => onClickTab(itemName)}>
         {itemName}
       </button>);
   }

@@ -4,8 +4,8 @@
 @import 'src/styles/variables/colors';
 @import 'src/styles/variables/dimensions';
 
-$header-padding: $spacer-sm $spacer-xxlg 0 $spacer-xxlg;
-$header-padding-mobile: 1.25rem pxToRem(124px) 1.25rem $spacer;
+$header-padding: 0 $spacer-md;
+$header-padding-mobile: 1.25rem $spacer;
 
 .header {
   background-color: $app-bg;
@@ -28,7 +28,8 @@ $header-padding-mobile: 1.25rem pxToRem(124px) 1.25rem $spacer;
     background: none;
     border: none;
     display: inline-flex;
-    padding: 0 0 $spacer-sm 0;
+    padding: $spacer-xsm 0;
+    margin: auto;
 
     @media (max-width: $breakpoint-mobile) {
       padding: 0;
@@ -36,10 +37,10 @@ $header-padding-mobile: 1.25rem pxToRem(124px) 1.25rem $spacer;
   }
 
   &__logo {
-    padding-right: $spacer-sm;
+    width: 96px;
 
     @media (max-width: $breakpoint-mobile) {
-      width: 28px;
+      width: 48px;
     }
   }
 
@@ -61,7 +62,7 @@ $header-padding-mobile: 1.25rem pxToRem(124px) 1.25rem $spacer;
   }
 
   &__title {
-    @include H2-24($text-white);
+    @include H1-32($text-white);
     margin: 0;
     align-self: center;
 
