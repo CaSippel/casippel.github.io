@@ -11,6 +11,7 @@ export const translations = {
   general: {
     companyDescription: 'A description about how we lost to pingpong barfa',
     companyName: 'Point01',
+    companyNameFull: 'Point01 Studio',
     owners: {
       // TODO: move this into enum inside consts file
       c: 'Cassidee',
