@@ -1,4 +1,4 @@
-import * as Constants from '../constants';
+import * as Constants from '@lib/constants';
 
 const isScreenMobile = () => {
   const width = window.innerWidth > window.outerWidth ? window.outerWidth : window.innerWidth; 

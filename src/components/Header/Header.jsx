@@ -1,11 +1,10 @@
-import { translations } from '../../lib/translations';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import SideNav from '@components/SideNav/SideNav.jsx';
+import { translations } from '@lib/translations';
 // TODO: condense SVG imports into 1 import (index file in assets)
-import {ReactComponent as ReactHamburger} from '../../assets/hamburger.svg';
-import CompanyLogo from '../../assets/logo.svg';
-
-import SideNav from '../SideNav/SideNav.jsx';
+import {ReactComponent as ReactHamburger} from 'src/assets/hamburger.svg';
+import CompanyLogo from 'src/assets/logo.svg';
 import './Header.scss';
 
 Header.propTypes = {

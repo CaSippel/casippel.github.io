@@ -1,7 +1,7 @@
-import './Modal.scss';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import './Modal.scss';
 
 Modal.propTypes = {
   handleClose: PropTypes.func.isRequired,

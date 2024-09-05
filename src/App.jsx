@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { translations } from './lib/translations';
-import { isScreenMobile } from './lib/utils/dimensions';
-
-import CompanyLogo from './assets/logo.svg';
-import Header from './components/Header/Header.jsx';
+import Header from '@components/Header/Header.jsx';
+import { translations } from '@lib/translations';
+import { isScreenMobile } from '@lib/utils/dimensions';
+import CompanyLogo from 'src/assets/logo.svg';
 import './App.scss';
 
 function App() {

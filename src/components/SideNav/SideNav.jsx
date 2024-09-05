@@ -1,7 +1,7 @@
-import './SideNav.scss';
-import Modal from '../Modal/Modal.jsx';
-import {ReactComponent as ReactClose} from '../../assets/close.svg';
 import PropTypes from 'prop-types';
+import Modal from '@components/Modal/Modal.jsx';
+import {ReactComponent as ReactClose} from 'src/assets/close.svg';
+import './SideNav.scss';
 
 SideNav.propTypes = {
   title: PropTypes.string.isRequired,

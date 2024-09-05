@@ -1,9 +1,9 @@
 // example
-export const HEADER_TITLE = "KG Pokédex";
+export const HEADER_TITLE = 'KG Pokédex';
 export const HEADER_TABS = {
-  home: "Pokédex",
-  party: "My Pokédex",
-  profile: "Trainer Profile",
+  home: 'Pokédex',
+  party: 'My Pokédex',
+  profile: 'Trainer Profile',
 };
 
 // actual - can be managed by anyone, should keep backups?
