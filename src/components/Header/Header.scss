@@ -4,6 +4,7 @@
 @import 'src/styles/variables/colors';
 @import 'src/styles/variables/dimensions';
 
+$hamburger-width: 3rem;
 $header-padding: 0 $spacer-md;
 $header-padding-mobile: 1.25rem $spacer;
 
@@ -29,10 +30,12 @@ $header-padding-mobile: 1.25rem $spacer;
     border: none;
     display: inline-flex;
     padding: $spacer-xsm 0;
-    margin: auto;
+    margin-right: auto;
 
     @media (max-width: $breakpoint-mobile) {
+      margin: auto;
       padding: 0;
+      padding-right: $hamburger-width;
     }
   }
 

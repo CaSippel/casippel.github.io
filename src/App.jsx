@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Header from '@components/Header/Header.jsx';
 import { translations } from '@lib/translations';
-import { isScreenMobile } from '@lib/utils/dimensions';
+import * as Constants from '@lib/constants';
 import CompanyLogo from 'src/assets/logo.svg';
 import './App.scss';
 
@@ -12,24 +13,7 @@ function App() {
       setActiveTab(tab);
     }
   };
-
-  const [isMobile, setIsMobile] = useState(isScreenMobile());
-  useEffect(() => {
-    function handleResize() {
-      if (window) {
-        const screenMobile = isScreenMobile();
-        if (isMobile && !screenMobile) {
-          setIsMobile(false);
-        } else if (!isMobile && screenMobile) {
-          setIsMobile(true);
-        }
-      }
-    }
-    // check initial window size and add resize listener
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isMobile]);
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
   return (
     <div className="app">
@@ -47,7 +31,7 @@ function App() {
         <div>{translations.general.owners.v}</div>
       )}
 
-      <header className="app__header">
+      <div className="app__page">
         <img src={CompanyLogo} className="app__logo" alt="logo" />
         <h1 className="app__title">{ translations.general.companyName }</h1>
         <p className="app__description">{ translations.general.companyDescription }</p>
@@ -59,7 +43,13 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </div>
+
+      <footer>
+        footer content
+        <a>link 1</a>
+        <a>link 2</a>
+      </footer>
     </div>
   );
 }
