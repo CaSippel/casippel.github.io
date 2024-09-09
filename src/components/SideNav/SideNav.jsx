@@ -13,8 +13,8 @@ function SideNav({show, title, onClose, children}) {
   return (
     <Modal handleClose={onClose}>
       <nav className="sideNav">
-        <div className="sideNav__menu-item-wrapper">
-          <div className="sideNav__header sideNav__menu-item">
+        <div className="sideNav__menu-item-wrapper sideNav__header">
+          <div className="sideNav__menu-item">
             <button className="sideNav__close">
               <ReactClose alt="close" onClick={onClose} />
             </button>

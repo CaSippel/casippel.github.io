@@ -22,8 +22,20 @@
   height: inherit;
   text-align: center;
 
-  &__page {
+  &__footer {
     background-color: $app-bg;
+    color: $text-white;
+    display: flex;
+    height: fit-content;
+    padding: 1.5rem;
+  }
+  &__footer-link-list {
+    margin: 0;
+  }
+
+  &__page {
+    background-color: $app-bg-dark;
+    box-shadow: inset 0px 0px 8px 0px $white-shadow;
     min-height: calc(100% - $header-height);
     display: flex;
     flex-direction: column;
@@ -51,8 +63,14 @@
     margin: 0;
     padding-bottom: 0.5rem;
   }
+
   &__title {
     @include H1-32($text-color-primary);
     margin: 1rem 0;
+  }
+
+  &__text {
+    display: flex;
+    white-space: break-spaces;
   }
 }

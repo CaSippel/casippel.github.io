@@ -18,37 +18,41 @@ function App() {
   return (
     <div className="app">
       <Header activeTab={activeTab} onTabChange={handleTabChange} mobile={isMobile} />
-      {activeTab === translations.general.owners.c && (
-        <div>{translations.general.owners.c}</div>
-      )}
-      {activeTab === translations.general.owners.q && (
-        <div>{translations.general.owners.q}</div>
-      )}
-      {activeTab === translations.general.owners.r && (
-        <div>{translations.general.owners.r}</div>
-      )}
-      {activeTab === translations.general.owners.v && (
-        <div>{translations.general.owners.v}</div>
-      )}
 
       <div className="app__page">
         <img src={CompanyLogo} className="app__logo" alt="logo" />
         <h1 className="app__title">{ translations.general.companyName }</h1>
         <p className="app__description">{ translations.general.companyDescription }</p>
-        <a
-          className="app__link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p className="app__text">
+          {activeTab === translations.general.owners.c && (
+          <div>{translations.general.owners.c}</div>
+          )}
+          {activeTab === translations.general.owners.q && (
+            <div>{translations.general.owners.q}</div>
+          )}
+          {activeTab === translations.general.owners.r && (
+            <div>{translations.general.owners.r}</div>
+          )}
+          {activeTab === translations.general.owners.v && (
+            <div>{translations.general.owners.v}</div>
+          )}
+          , <a
+            className="app__link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>.
+        </p>
       </div>
 
-      <footer>
+      <footer className="app__footer">
         footer content
-        <a>link 1</a>
-        <a>link 2</a>
+        <ul className="app__footer-link-list">
+          <li><a>link 1</a></li>
+          <li><a>link 2</a></li>
+        </ul>
       </footer>
     </div>
   );

@@ -2,20 +2,21 @@
 @import 'src/styles/variables/colors';
 @import 'src/styles/variables/dimensions';
 
-$side-nav-border-radius: 0px $border-radius-md $border-radius-md 0px;
-$side-nav-header-padding: 1.25rem 0 1.25rem $spacer;
-$side-nav-menu-item-padding: $spacer-sm 0 $spacer-sm $spacer;
+$sidenav-border-radius: 0 $border-radius-md $border-radius-md 0;
+$sidenav-header-border-radius: 0 $border-radius-md 0 0;
+$sidenav-header-padding: 1.25rem 0 1.25rem $spacer;
+$sidenav-menu-item-padding: $spacer-sm 0 $spacer-sm $spacer;
 
 .sideNav {
-  background-color: $white;
-  border-radius: $side-nav-border-radius;
+  background-color: $sidenav-bg;
+  border-radius: $sidenav-border-radius;
   display: flex;
   flex-direction: column;
   height: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  box-shadow: 4px 0px 8px $gray-shadow;
+  box-shadow: 4px 0px 8px 4px $gray-shadow;
   width: 70%;
 
   &__close {
@@ -25,16 +26,18 @@ $side-nav-menu-item-padding: $spacer-sm 0 $spacer-sm $spacer;
   }
 
   &__header {
+    background-color: $sidenav-separator-color;
+    border-radius: $sidenav-header-border-radius;
     display: inline-flex;
-    padding: $side-nav-header-padding;
   }
 
   &__menu-item {
-    @include H3-16($text-black);
+    @include H3-16($sidenav-color);
     background: none;
     border: none;
     border-left: $nav-item-border;
-    padding: $side-nav-menu-item-padding;
+    display: flex;
+    padding: $sidenav-menu-item-padding;
     text-align: left;
 
     &--active {
@@ -45,11 +48,11 @@ $side-nav-menu-item-padding: $spacer-sm 0 $spacer-sm $spacer;
   }
 
   &__menu-item-wrapper {
-    border-bottom: solid 1px $gray-light;
+    border-bottom: solid 1px $sidenav-separator-color;
   }
 
   &__title {
-    @include H4-12($text-black);
+    @include H4-12($sidenav-color);
     margin: 0;
     align-self: center;
   }
