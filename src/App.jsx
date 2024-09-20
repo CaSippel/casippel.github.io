@@ -7,7 +7,7 @@ import CompanyLogo from 'src/assets/logo.svg';
 import './App.scss';
 
 function App() {
-  const [activeTab, setActiveTab] = useState(translations.general.owners.c);
+  const [activeTab, setActiveTab] = useState(translations.tabs.home);
   const handleTabChange = (tab) => {
     if (activeTab !== tab) {
       setActiveTab(tab);
@@ -23,28 +23,20 @@ function App() {
         <img src={CompanyLogo} className="app__logo" alt="logo" />
         <h1 className="app__title">{ translations.general.companyName }</h1>
         <p className="app__description">{ translations.general.companyDescription }</p>
-        <p className="app__text">
-          {activeTab === translations.general.owners.c && (
-          <div>{translations.general.owners.c}</div>
+        <div className="app__text">
+          {activeTab === translations.tabs.home && (
+          <div>{translations.content.home}</div>
           )}
-          {activeTab === translations.general.owners.q && (
-            <div>{translations.general.owners.q}</div>
+          {activeTab === translations.tabs.about && (
+            <div>{translations.content.about}</div>
           )}
-          {activeTab === translations.general.owners.r && (
-            <div>{translations.general.owners.r}</div>
+          {activeTab === translations.tabs.schedule && (
+            <div>{translations.content.schedule}</div>
           )}
-          {activeTab === translations.general.owners.v && (
-            <div>{translations.general.owners.v}</div>
+          {activeTab === translations.tabs.contact && (
+            <div>{translations.content.contact}</div>
           )}
-          , <a
-            className="app__link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>.
-        </p>
+        </div>
       </div>
 
       <footer className="app__footer">
